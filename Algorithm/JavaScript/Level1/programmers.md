@@ -57,7 +57,9 @@ filter함수를 사용해 해당값과 인덱스를 받아서 값과 인덱스+1
 
 ### **입출력 예**
 
-[제목 없음](https://www.notion.so/5e12798a89e94c748cc99655b96ccee7)
+|a|b|result|
+|------|---|---|
+|5|24|"TUE"|
 
 # 내풀이
 
@@ -107,7 +109,11 @@ function solution(a, b) {
 
 ### 입출력 예
 
-[제목 없음](https://www.notion.so/92f811ac47a74d9ca1c9047f8568eb32)
+|s|n|answer|
+|------|---|---|
+|"AB"|1|"BC"|
+|"z"|1|"a"|
+|"a B z"|4|"e F d"|
 
 # 나의 풀이
 
