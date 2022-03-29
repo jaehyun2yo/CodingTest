@@ -1,3 +1,44 @@
+# 📍 **가운데 글자 가져오기**
+### **문제 설명**
+
+단어 s의 가운데 글자를 반환하는 함수, solution을 만들어 보세요. 단어의 길이가 짝수라면 가운데 두글자를 반환하면 됩니다.
+
+### 재한사항
+
+- s는 길이가 1 이상, 100이하인 스트링입니다.
+
+
+# 내 풀이
+
+```jsx
+function solution(s) {
+    return s.length % 2 == 0 ? s.substr((s.length/2)-1, 2) : s.substr(s.length/2, 1);
+
+}
+console.log(solution("abde"));
+```
+
+글자길이가 짝수 홀수를 나누기위해서 문자열의 길이로 확인한뒤 짝수이면 substr함수를 사용해 문자열길이/2 -1 부터 ~ 두글자를 리턴해주고 홀수라면 문자열길이/2 인덱스부터 하나를 리턴해준다
+
+# 문자열 자르기 사용할수있는 함수들
+
+## substr()
+
+<aside>
+💡 str.substr(start[, length])
+기존문자열의 start 위치에서 length 만큼 리턴한다
+
+</aside>
+
+## subString()
+
+<aside>
+💡 str.substring(indexStrat[,indexEnd])
+strart인덱스 자리부터 end까지 잘라서 리턴한다.
+
+</aside>
+
+---
 # 📍 **최소 직사각형**
 ### **문제 설명**
 
