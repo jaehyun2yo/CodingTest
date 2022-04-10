@@ -99,3 +99,21 @@ if (minute < 0) {
 }
 
 console.log(hour + " " + minute);
+
+// 오븐시계 
+
+const readline = require("readline");
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+let input = [];
+let count = 0;
+rl.on("line", function (line) {
+    input.push(parseInt())
+    if (count = 1) {
+        rl.on("close");
+    }
+});
+rl.close()
