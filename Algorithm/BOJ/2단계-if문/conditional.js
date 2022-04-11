@@ -111,9 +111,10 @@ const rl = readline.createInterface({
 let input = [];
 let count = 0;
 rl.on("line", function (line) {
-    input.push(parseInt())
+    input.push(parseInt(line.split(" ")))
     if (count = 1) {
-        rl.on("close");
+        input.push(line);
+        rl.close();
     }
 });
 rl.close()
