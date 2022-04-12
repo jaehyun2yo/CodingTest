@@ -1,3 +1,41 @@
+# 📍자릿수 더하기
+
+### **문제 설명**
+
+자연수 N이 주어지면, N의 각 자릿수의 합을 구해서 return 하는 solution 함수를 만들어 주세요.예를들어 N = 123이면 1 + 2 + 3 = 6을 return 하면 됩니다.
+
+### 제한사항
+
+- N의 범위 : 100,000,000 이하의 자연수
+
+---
+
+# 나의 문제풀이
+
+```jsx
+function solution(n) {
+  return n
+    .toString()
+    .split("")
+    .map((x) => Number(x))
+    .reduce((sum, value) => sum + value);
+}
+```
+
+정수를 split로 배열로 변환한뒤 reduce로 합산하려했는데 문자열이라서 문자열합산이되더라구요
+
+그래서 map을 통해서 숫자형으로 변환시켜서 다시 합산을진행했습니다
+
+# 다른사람 문제풀이
+
+```jsx
+function solution(n) {
+  return (n + "").split("").reduce((acc, curr) => acc + parseInt(curr), 0);
+}
+```
+
+내가 기존에 풀었던 내용에서 map을 이용해서 숫자형태로 변경했는데 그냥 reduce 안에 있는 currentValue 부분을 숫자형으로 변환시키면 되는일이였다!
+
 # 📍이상한 문자 만들기
 
 ### **문제 설명**
