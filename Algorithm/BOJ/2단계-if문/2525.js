@@ -1,25 +1,25 @@
 // 오븐시계
-const readline = require("readline");
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
 
-let input = [];
-let count = 0;
-rl.on("line", function (line) {
-  input.push(line);
-}).on("close", function (line) {
-  let hour = parseInt(input[0].split(" ")[0]);
-  let min = parseInt(input[0].split(" ")[1]);
-  let cookTime = parseInt(input[1]);
+var fs = require("fs");
+const input = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n");
 
-  if (min + cookTime >= 60) {
-    hour += Math.floor((min + cookTime) / 60);
-    min = (min + cookTime) % 60;
-  } else {
-    min = (min + cookTime) % 60;
+const time = input[0].split(" ");
+
+let h = parseInt(time[0]);
+let m = parseInt(time[1]);
+let cookTime = parseInt(input[1]);
+
+if (m + cookTime >= 60) {
+  h += m + cookTime / 60;
+  m = (m + cookTime) % 60;
+  if (h > 23) {
+    h = h % 24;
   }
-  hour %= 24;
-  consolelog(hour, min);
-});
+} else {
+  m += cookTime;
+}
+console.log(`${h} ${m}`);
